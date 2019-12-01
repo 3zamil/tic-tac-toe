@@ -1,0 +1,87 @@
+/* .theme {
+    background: black;
+} */
+.g-board {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  width: 70%;
+  background: black;
+  justify-content: space-around;
+}
+
+.unit {
+  width: 33%;
+  height: 0;
+  padding-bottom: 33.33%;
+  text-align: center;
+  font: 900 15vmin sans-serif;
+  line-height: 150%;
+  background: yellowgreen;
+  cursor: grab;
+}
+
+.play-X {
+  color: rgba(242, 79, 93, 1);
+  background: rgba(10, 54, 63, 1);
+}
+
+.play-O {
+  color: rgba(242, 198, 67, 1);
+  background: rgb(122, 119, 216);
+}
+
+.unit:hover {
+  background: wheat;
+}
+
+/* Color Theme Swatches in Hex */
+.MONKEY-ISLAND-1-hex {
+  color: #f2505d;
+}
+.MONKEY-ISLAND-2-hex {
+  color: #7a77d9;
+}
+.MONKEY-ISLAND-3-hex {
+  color: #020e26;
+}
+.MONKEY-ISLAND-4-hex {
+  color: #0b3640;
+}
+.MONKEY-ISLAND-5-hex {
+  color: #f2c744;
+}
+
+/* Color Theme Swatches in RGBA */
+.MONKEY-ISLAND-1-rgba {
+  color: rgba(242, 79, 93, 1);
+}
+.MONKEY-ISLAND-2-rgba {
+  color: rgba(122, 119, 216, 1);
+}
+.MONKEY-ISLAND-3-rgba {
+  color: rgba(1, 14, 38, 1);
+}
+.MONKEY-ISLAND-4-rgba {
+  color: rgba(10, 54, 63, 1);
+}
+.MONKEY-ISLAND-5-rgba {
+  color: rgba(242, 198, 67, 1);
+}
+
+/* Color Theme Swatches in HSLA */
+.MONKEY-ISLAND-1-hsla {
+  color: hsla(354, 86, 63, 1);
+}
+.MONKEY-ISLAND-2-hsla {
+  color: hsla(241, 56, 65, 1);
+}
+.MONKEY-ISLAND-3-hsla {
+  color: hsla(219, 90, 7, 1);
+}
+.MONKEY-ISLAND-4-hsla {
+  color: hsla(191, 70, 14, 1);
+}
+.MONKEY-ISLAND-5-hsla {
+  color: hsla(45, 87, 60, 1);
+}
