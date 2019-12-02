@@ -6,6 +6,7 @@ body {
   align-items: center;
   align-content: center;
   text-align: center;
+  background-color: rgb(76, 143, 156);;
 }
 header,
 footer {
@@ -14,6 +15,21 @@ footer {
   padding: 5px;
   font: bold 12px sans-serif;
 }
+
+footer {
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  width:100%;
+  font:  10px sans-serif;
+
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 main {
   display: flex;
   flex-flow: row-reverse;
@@ -21,6 +37,7 @@ main {
   justify-content: space-evenly;
   align-content: center;
   margin: 10px;
+  height: 100%;
 }
 
 nav {
@@ -28,7 +45,7 @@ nav {
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  font-family: sans-serif;
+  font: bold 12px sans-serif ;
   background: yellowgreen;
   border-radius: 10px;
   width: 20%;
@@ -65,8 +82,10 @@ nav {
 }
 
 .unit:hover {
-  background: wheat;
+   background: rgba(153, 205, 50, 0.733);
+  transform: scale(1.05);
 }
+
 
 /* Color Theme Swatches in Hex */
 .MONKEY-ISLAND-1-hex {
@@ -105,7 +124,7 @@ nav {
 @media only screen and (max-width: 576px) {
   main {
     flex-direction: column-reverse;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
   }
   .g-board {

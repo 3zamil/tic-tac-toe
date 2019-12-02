@@ -1,6 +1,10 @@
 let stateText = ["X", "O"];
 let pickedNo;
 let board = [];
+let numClicks = [];
+
+
+
 const init = function() {
   let dim1 = 3;
   let dim2 = 3;
@@ -10,11 +14,10 @@ const init = function() {
   let random = Math.floor(Math.random() * 2);
   pickedNo = random;
 
-  // let x = [];
-  // let o = [];
   board = [];
+  numClicks = [];
+
   $("#board").html("");
-  console.log($("#board"));
   for (let i = 1; i <= boxes; i++) {
     let $div = $("<div>", { id: i, class: "unit" });
     $div.click(play);
@@ -26,6 +29,7 @@ const init = function() {
 const play = function(event) {
   let myTarget = event.target;
   pickedNo = +!pickedNo;
+  numClicks.push(1);
   let thePicked = stateText[pickedNo];
   $(myTarget).text(thePicked);
 
@@ -41,39 +45,36 @@ const play = function(event) {
   if (board[1] == board[2] && board[1] == board[3]) {
     alert(board[1] + " WIN");
     init();
-  }
-  if (board[4] == board[5] && board[4] == board[6]) {
+  } else if (board[4] == board[5] && board[4] == board[6]) {
     alert(board[4] + " WIN");
     init();
-  }
-  if (board[7] == board[8] && board[7] == board[9]) {
+  } else if (board[7] == board[8] && board[7] == board[9]) {
     alert(board[7] + " WIN");
     init();
-  }
-  if (board[1] == board[4] && board[1] == board[7]) {
+  } else if (board[1] == board[4] && board[1] == board[7]) {
     alert(board[1] + " WIN");
     init();
-  }
-  if (board[2] == board[5] && board[2] == board[8]) {
+  } else if (board[2] == board[5] && board[2] == board[8]) {
     alert(board[2] + " WIN");
     init();
-  }
-  if (board[3] == board[6] && board[3] == board[9]) {
+  } else if (board[3] == board[6] && board[3] == board[9]) {
     alert(board[3] + " WIN");
     init();
-  }
-  if (board[1] == board[5] && board[1] == board[9]) {
+  } else if (board[1] == board[5] && board[1] == board[9]) {
     alert(board[1] + " WIN");
     init();
-  }
-  if (board[3] == board[5] && board[3] == board[7]) {
+  } else if (board[3] == board[5] && board[3] == board[7]) {
     alert(board[3] + " WIN");
     init();
+  } else {
+    if (numClicks.length == 9) {
+      alert("NO ONE WIN");
+      init();
+    }
   }
 };
 
 $(function() {
   init();
+  $("#start").click(init)
 });
-
-// console.log("Hello Tic Tac Toe", boxes, picked, random);
