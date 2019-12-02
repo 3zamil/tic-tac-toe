@@ -1,10 +1,11 @@
-let stateText = ["X", "O"];
+let stateText;
 let pickedNo;
 let board = [];
 let numClicks = [];
+let ss = $("#xPlayer").val();
 
 
-
+// Initialaization function:
 const init = function() {
   let dim1 = 3;
   let dim2 = 3;
@@ -16,6 +17,17 @@ const init = function() {
 
   board = [];
   numClicks = [];
+  $("#xPlayer").prop('disabled', false)
+  $("#oPlayer").prop('disabled', false)
+
+  p1 = $("#xPlayer").val().substr(0, 1).toUpperCase()
+  p2 = $("#oPlayer").val().substr(0, 1).toUpperCase()
+  if (p1==p2) {
+    p1 += pickedNo +1
+    p2 += +!pickedNo +1
+  }
+  stateText = [p1, p2];
+ 
 
   $("#board").html("");
   for (let i = 1; i <= boxes; i++) {
@@ -26,9 +38,15 @@ const init = function() {
   }
 };
 
+//ply X or O
 const play = function(event) {
   let myTarget = event.target;
   pickedNo = +!pickedNo;
+  if (numClicks.length ==0) {
+    $("#xPlayer").prop('disabled', true)
+    $("#oPlayer").prop('disabled', true)
+   
+  }
   numClicks.push(1);
   let thePicked = stateText[pickedNo];
   $(myTarget).text(thePicked);
@@ -37,14 +55,18 @@ const play = function(event) {
     .show()
     .fadeIn("slow");
 
-  $(myTarget).addClass("play-" + thePicked);
+  $(myTarget).addClass("play-" + pickedNo);
   $(myTarget).off();
   let boxId = $(myTarget).attr("id");
   board[boxId] = thePicked;
 
   if (board[1] == board[2] && board[1] == board[3]) {
-    alert(board[1] + " WIN");
-    init();
+    setTimeout(() => {
+      alert(board[1] + " WIN");
+      init();
+    }, 400);
+
+    //check winner
   } else if (board[4] == board[5] && board[4] == board[6]) {
     alert(board[4] + " WIN");
     init();
@@ -76,5 +98,5 @@ const play = function(event) {
 
 $(function() {
   init();
-  $("#start").click(init)
+  $("#start").click(init);
 });
