@@ -36,7 +36,6 @@ input[type=text] {
   border: 2px solid #ccc;
   border-radius: 10px;
   font-size: 12px;
-  background-image: url('../images/user.png');
   background-position: 10px 10px; 
   background-repeat: no-repeat;
   padding: 5px 5px 5px 5px;
