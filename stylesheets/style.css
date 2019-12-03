@@ -3,43 +3,56 @@
 } */
 body {
   margin: 0;
-  align-items: center;
-  align-content: center;
-  text-align: center;
-  background-color: rgb(76, 143, 156);;
+  background-color: rgb(76, 143, 156);
 }
 header,
 footer {
   background-color: rgba(10, 54, 63, 1);
   color: rgba(242, 79, 93, 1);
   padding: 5px;
+  margin: 0;
   font: bold 12px sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
 }
 
 footer {
-  position:fixed;
-  left:0px;
-  bottom:0px;
-  width:100%;
-  font:  10px sans-serif;
-
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  font: 10px sans-serif;
 }
 
 a {
   text-decoration: none;
   color: inherit;
 }
+nav a {
+  width: 100%;
+  background-color: #f2505d;
+  color: #0b3640;
+  border-radius: 10px;
+  font-size: 12px;
+  padding: 5px 5px 5px 5px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+}
 
-input[type=text] {
+.g-title {
+}
+
+input[type="text"] {
   width: 100%;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 10px;
   font-size: 12px;
-  background-position: 10px 10px; 
+  background-position: 10px 10px;
   background-repeat: no-repeat;
   padding: 5px 5px 5px 5px;
-  background: rgba(175, 200, 123, 0.733);
 }
 
 main {
@@ -55,11 +68,11 @@ main {
 nav {
   display: flex;
   flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  font: bold 12px sans-serif ;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font: bold 12px sans-serif;
   color: #f2505d;
-  background: #0b3640;
+  background: #236979;
   border-radius: 10px;
   width: 20%;
   padding: 5px;
@@ -76,13 +89,13 @@ nav {
   height: 0;
   padding-bottom: 33.33%;
   text-align: center;
-  font: 900 10vmin sans-serif;
+  font: 900 15vmin sans-serif;
   line-height: 150%;
   background: yellowgreen;
   cursor: grab;
-  -webkit-box-shadow:inset 0px 0px 0px 1px black;
-  -moz-box-shadow:inset 0px 0px 0px 1px black;
-  box-shadow:inset 0px 0px 0px 1px black;
+  -webkit-box-shadow: inset 0px 0px 0px 1px black;
+  -moz-box-shadow: inset 0px 0px 0px 1px black;
+  box-shadow: inset 0px 0px 0px 1px black;
 }
 
 .play-0 {
@@ -96,10 +109,40 @@ nav {
 }
 
 .unit:hover {
-   background: rgba(153, 205, 50, 0.733);
+  background: rgba(153, 205, 50, 0.733);
   transform: scale(1.05);
 }
 
+.race {
+  display: flex;
+  flex-flow: row;
+  height: 80%;
+  width: 100%;
+  margin-bottom: 29px;
+}
+.track-0 {
+  position: relative;
+  width: 50%;
+}
+
+.track-1 {
+  position: relative;
+  width: 50%;
+}
+
+.name-0 {
+  position: absolute;
+  bottom: -29px;
+}
+
+.name-1 {
+  position: absolute;
+  bottom: -29px;
+}
+
+#start {
+  text-align: center;
+}
 
 /* Color Theme Swatches in Hex */
 .MONKEY-ISLAND-1-hex {
