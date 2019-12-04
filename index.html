@@ -20,14 +20,8 @@
         <source src="/audio/cyba_-_yellow.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
-
-      <!-- <video controls="" autoplay="" name="media"><source src="/audio/cyba_-_yellow.mp3" type="audio/mpeg"></video> -->
     </header>
     <main>
-
-
-        <input class="slider" value="1" min="1" max="5" name="rangeslider" type="range" />
-
       <nav>
         <div class="race">
           <div class="track-0">
@@ -59,8 +53,12 @@
             </div>
           </div>
         </div>
-
-        <a href="#" id="start">start</a>
+        <div class = "start-div">
+          <form>
+            Rounds: <input class="numb" type="number" name="quantity" min="1" max="5" value="1" />
+          </form>
+          <a href="#" id="start">start</a>
+        </div>
       </nav>
       <div id="board" class="theme g-board"></div>
     </main>

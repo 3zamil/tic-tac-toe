@@ -2,6 +2,8 @@ let stateText;
 let pickedNo;
 let board = [];
 let numClicks = [];
+let rounds = []
+
 let ss = $("#player-0").val();
 
 // Initialaization function:
@@ -9,10 +11,13 @@ const init = function() {
   let dim1 = 3;
   let dim2 = 3;
 
+  
   let boxes = dim1 * dim2;
 
   let random = Math.floor(Math.random() * 2);
   pickedNo = random;
+
+  $("#player-" + +!pickedNo).css("border-color", "red");
 
   board = [];
   numClicks = [];
@@ -45,17 +50,26 @@ const init = function() {
 };
 
 const results = function(winner) {
+  
+  $("input.numb").val($("input.numb").val() - 1)
+  if($("input.numb").val())
+    alert("ff")
   // $("#player-" + winner).animate({ top: "250px" });
   $(".name-" + winner).animate({ bottom: "+=20%" }, "slow");
 };
 //ply X or O
 const play = function(event) {
+  $("input.numb").prop("disabled", true);
   let myTarget = event.target;
   pickedNo = +!pickedNo;
   if (numClicks.length == 0) {
     $("#player-0").prop("disabled", true);
     $("#player-1").prop("disabled", true);
   }
+
+  $("#player-" + pickedNo).css("border-color", "#ccc");
+  $("#player-" + +!pickedNo).css("border-color", "red");
+
   numClicks.push(1);
   let thePicked = stateText[pickedNo];
   $(myTarget).text(thePicked);
@@ -123,8 +137,4 @@ $(function() {
   init();
   $("#start").click(init);
   // $("#sound").click(backMusic);
-
 });
-
-
-

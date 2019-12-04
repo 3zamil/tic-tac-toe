@@ -15,11 +15,10 @@ footer {
   font: bold 12px sans-serif;
   display: flex;
   justify-content: space-between;
-
 }
 header {
   background-color: white;
-  border-bottom: solid 20px  rgba(10, 54, 63, 1);
+  border-bottom: solid 20px rgba(10, 54, 63, 1);
 }
 
 footer {
@@ -29,7 +28,6 @@ footer {
   width: 100%;
   font: 10px sans-serif;
   color: white;
-  
 }
 
 a {
@@ -95,6 +93,7 @@ nav {
   font: 900 12vmin sans-serif;
   background: yellowgreen;
   cursor: grab;
+
   -webkit-box-shadow: inset 0px 0px 0px 1px black;
   -moz-box-shadow: inset 0px 0px 0px 1px black;
   box-shadow: inset 0px 0px 0px 1px black;
@@ -147,10 +146,28 @@ nav {
 #start {
   text-align: center;
   font-size: 18px;
+  width: 50%;
+}
+
+.start-div {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
 #myTune {
   width: 20px;
+}
+
+.numb {
+  background-color: rgba(76, 143, 156, 0);
+  font-size: 18px;
+  border: none;
+  color: rgba(242, 79, 93, 1);
 }
 
 /* Color Theme Swatches in Hex */
@@ -191,7 +208,6 @@ input[type="range"] {
   transform: rotateZ(270deg);
 }
 
-
 @media only screen and (max-width: 420px) {
   main {
     flex-direction: column-reverse;
@@ -207,10 +223,18 @@ input[type="range"] {
   .unit {
     font-size: 15vmin;
     line-height: 170%;
-
   }
   header img {
     height: 40px;
   }
 }
 
+@media only screen and (min-width: 1000px) {
+
+  .unit {
+    font-size: 10vmin;
+    line-height: 190%;
+  }
+
+
+}
