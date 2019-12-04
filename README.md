@@ -22,3 +22,13 @@ let ss = 4;
 </html>
 
 ```
+
+## My Project Deployment
+## Technologies used in the project
+## wireframes and user stories.
+## Planning and Development Process
+# Describe any lines or function in the code
+```js
+```
+## Challenges
+# Unsolved problems which would be fixed in future iterations.
