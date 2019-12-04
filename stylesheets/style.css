@@ -4,6 +4,7 @@
 body {
   margin: 0;
   background-color: rgb(76, 143, 156);
+  overflow: hidden;
 }
 header,
 footer {
@@ -12,10 +13,13 @@ footer {
   padding: 5px;
   margin: 0;
   font: bold 12px sans-serif;
-}
-header {
   display: flex;
   justify-content: space-between;
+
+}
+header {
+  background-color: white;
+  border-bottom: solid 20px  rgba(10, 54, 63, 1);
 }
 
 footer {
@@ -24,6 +28,8 @@ footer {
   bottom: 0px;
   width: 100%;
   font: 10px sans-serif;
+  color: white;
+  
 }
 
 a {
@@ -39,9 +45,6 @@ nav a {
   padding: 5px 5px 5px 5px;
   box-sizing: border-box;
   border: 2px solid #ccc;
-}
-
-.g-title {
 }
 
 input[type="text"] {
@@ -89,8 +92,7 @@ nav {
   height: 0;
   padding-bottom: 33.33%;
   text-align: center;
-  font: 900 15vmin sans-serif;
-  line-height: 150%;
+  font: 900 12vmin sans-serif;
   background: yellowgreen;
   cursor: grab;
   -webkit-box-shadow: inset 0px 0px 0px 1px black;
@@ -133,15 +135,22 @@ nav {
 .name-0 {
   position: absolute;
   bottom: -29px;
+  width: 100%;
 }
 
 .name-1 {
   position: absolute;
   bottom: -29px;
+  width: 100%;
 }
 
 #start {
   text-align: center;
+  font-size: 18px;
+}
+
+#myTune {
+  width: 20px;
 }
 
 /* Color Theme Swatches in Hex */
@@ -178,6 +187,11 @@ nav {
   color: rgba(242, 198, 67, 1);
 }
 
+input[type="range"] {
+  transform: rotateZ(270deg);
+}
+
+
 @media only screen and (max-width: 420px) {
   main {
     flex-direction: column-reverse;
@@ -192,5 +206,11 @@ nav {
   }
   .unit {
     font-size: 15vmin;
+    line-height: 170%;
+
+  }
+  header img {
+    height: 40px;
   }
 }
+

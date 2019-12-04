@@ -47,7 +47,6 @@ const init = function() {
 const results = function(winner) {
   // $("#player-" + winner).animate({ top: "250px" });
   $(".name-" + winner).animate({ bottom: "+=20%" }, "slow");
-
 };
 //ply X or O
 const play = function(event) {
@@ -72,6 +71,7 @@ const play = function(event) {
     //   init();
     // }, 400);
     results(pickedNo);
+    init();
 
     //check winner
   } else if (board[4] == board[5] && board[4] == board[6]) {
@@ -79,21 +79,27 @@ const play = function(event) {
     // alert(board[4] + " WIN");
     init();
   } else if (board[7] == board[8] && board[7] == board[9]) {
+    results(pickedNo);
     // alert(board[7] + " WIN");
     init();
   } else if (board[1] == board[4] && board[1] == board[7]) {
+    results(pickedNo);
     // alert(board[1] + " WIN");
     init();
   } else if (board[2] == board[5] && board[2] == board[8]) {
+    results(pickedNo);
     // alert(board[2] + " WIN");
     init();
   } else if (board[3] == board[6] && board[3] == board[9]) {
+    results(pickedNo);
     // alert(board[3] + " WIN");
     init();
   } else if (board[1] == board[5] && board[1] == board[9]) {
+    results(pickedNo);
     // alert(board[1] + " WIN");
     init();
   } else if (board[3] == board[5] && board[3] == board[7]) {
+    results(pickedNo);
     // alert(board[3] + " WIN");
     init();
   } else {
@@ -116,4 +122,9 @@ const backMusic = function() {
 $(function() {
   init();
   $("#start").click(init);
+  // $("#sound").click(backMusic);
+
 });
+
+
+

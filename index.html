@@ -10,14 +10,13 @@
   </head>
   <body>
     <header>
-      <div class="header1">
-        <h2>GameZooon</h2>
-      </div>
+      <img src="/images/GameZoooN.png" alt="GamZoooN Logo" />
+
       <div>
         <h2 class="g-title">TEC TAC TOE</h2>
       </div>
-      <div>play</div>
-      <audio id="myTune" loop>
+      <div id="sound"></div>
+      <audio controls loop id="myTune">
         <source src="/audio/cyba_-_yellow.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
@@ -25,6 +24,10 @@
       <!-- <video controls="" autoplay="" name="media"><source src="/audio/cyba_-_yellow.mp3" type="audio/mpeg"></video> -->
     </header>
     <main>
+
+
+        <input class="slider" value="1" min="1" max="5" name="rangeslider" type="range" />
+
       <nav>
         <div class="race">
           <div class="track-0">
@@ -62,8 +65,10 @@
       <div id="board" class="theme g-board"></div>
     </main>
     <footer>
-      ©2019 GameZooon <a href="#"> Privacy Policy </a>
-      <a href="#"> Terms of Service</a>
+      <div>
+        ©2019 GameZooon <a href="#"> Privacy Policy </a>
+        <a href="#"> Terms of Service</a>
+      </div>
       <div class="attribution-block">
         <a href="http://dig.ccmixter.org/files/cyba/60166">yellow</a> by cyba
         (c) copyright 2019 Licensed under a Creative Commons
